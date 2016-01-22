@@ -10,7 +10,7 @@
 #import "citysViewController.h"
 #import "AFNetworking.h"
 #import "Header.h"
-
+#import "futureWeayherViewController.h"
 @interface weatherViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -29,7 +29,17 @@
 @property (weak, nonatomic) IBOutlet UIButton *lifeBtn;
 @property (nonatomic, strong) NSString *cityName;
 @property (nonatomic, strong) NSDictionary *weatherInfo;
-@property (weak, nonatomic) IBOutlet UIView *centerView;
+@property (nonatomic, strong) NSDictionary *todayWeather;
+@property (nonatomic, strong) NSArray *futureWeather;
+@property (weak, nonatomic) IBOutlet UIView *newlifeInfoView;
+@property (weak, nonatomic) IBOutlet UILabel *adviceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dressing_index;
+@property (weak, nonatomic) IBOutlet UILabel *uv_index;
+@property (weak, nonatomic) IBOutlet UILabel *comfort_index;
+@property (weak, nonatomic) IBOutlet UILabel *wash_index;
+@property (weak, nonatomic) IBOutlet UILabel *travel_index;
+@property (weak, nonatomic) IBOutlet UILabel *exercise_index;
+@property (weak, nonatomic) IBOutlet UILabel *drying_index;
 
 
 @end
@@ -41,6 +51,7 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
     self.tabBarController.tabBar.translucent = NO;
+   
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeCityName:) name:@"changeCityName" object:nil];
     if (_cityName == nil) {
         _cityName = @"北京";
@@ -48,8 +59,6 @@
     _cityNameItem.title = _cityName;
     [_cityNameBtn setTitle:_cityName forState:UIControlStateNormal];
     [self getWeather];
-    [self setAutoLayout];
-    
 }
 
 - (void)changeCityName:(NSNotification *)notification{
@@ -76,78 +85,81 @@
     
     //请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"key"] = kPobAppKey;
-    params[@"city"] = _cityName;
+    params[@"key"] = kJuheWeatherAppKey;
+    params[@"cityname"] = _cityName;
+    params[@"dtype"] = @"json";
     
-    NSString *urlStr = @"http://apicloud.mob.com/v1/weather/query";
+    NSString *urlStr = @"http://op.juhe.cn/onebox/weather/query";
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     
     [manager GET:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSDictionary *temp = (NSDictionary *)responseObject;
-        
-        NSArray *arr = temp[@"result"];
-        
-        _weatherInfo = arr[0];
-        
-        NSString *temper = _weatherInfo[@"temperature"];
-        NSString *sig = [temper substringWithRange:NSMakeRange(0, 1)];
-        if ([sig isEqualToString:@"-"]) {
-            if (temper.length == 4) {
-                _temperatureLabel.text = [temper substringWithRange:NSMakeRange(1, 2)];
-            }
-            _temperatureLabel.text = [temper substringWithRange:NSMakeRange(1, 1)];
-        }
-        else
-        {
-            if (temper.length == 3) {
-                _temperatureLabel.text = [temper substringWithRange:NSMakeRange(0, 2)];
-            }
-            _temperatureLabel.text = [temper substringWithRange:NSMakeRange(0, 1)];
-        }
     
-        [_cityNameBtn setTitle:_weatherInfo[@"distrct"] forState:UIControlStateNormal];
-        if (_weatherInfo[@"distrct"] == nil) {
-            [_cityNameBtn setTitle:@"找不到该城市" forState:UIControlStateNormal];
+        NSDictionary *temp = (NSDictionary *)responseObject;
 
-        }
+        NSDictionary *dic = temp[@"result"][@"data"];
+        
+        _weatherInfo = dic[@"realtime"];
+        _todayWeather = dic[@"today"];
+        _futureWeather = dic[@"weather"];
+        
+        [_cityNameBtn setTitle:_weatherInfo[@"city_name"] forState:UIControlStateNormal];
+        
+        _temperatureLabel.text = [NSString stringWithFormat:@"%@°",_weatherInfo[@"weather"][@"temperature"]];
 
-        _weatherLabel.text = _weatherInfo[@"weather"];
-        _weekLabel.text = _weatherInfo[@"week"];
-        _pollutionIndexLabel.text =[NSString stringWithFormat:@"污染指数：%@,%@",_weatherInfo[@"pollutionIndex"],_weatherInfo[@"airCondition"]];
-        _humidityANDwind.text = [NSString stringWithFormat:@"%@ %@",_weatherInfo[@"humidity"],_weatherInfo[@"wind"]];
-        NSString *str = _weatherInfo[@"updateTime"];
-        
-        NSString *str1 = [str substringWithRange:NSMakeRange(0, 4)];
-        NSString *str2 = [str substringWithRange:NSMakeRange(4, 2)];
-        NSString *str3 = [str substringWithRange:NSMakeRange(6, 2)];
-        NSString *str4 = [str substringWithRange:NSMakeRange(8, 2)];
-        NSString *str5 = [str substringWithRange:NSMakeRange(10, 2)];
-        
-        _dateLabel.text = [NSString stringWithFormat:@"%@年%@月%@日",str1,str2,str3];
-        _timeLabel.text = [NSString stringWithFormat:@"信息于 %@:%@ 发布",str4,str5];
-        
+        _weatherLabel.text = _weatherInfo[@"weather"][@"info"];
+        _weekLabel.text = [NSString stringWithFormat:@"星期%@",dic[@"weather"][0][@"week"]];
+        _pollutionIndexLabel.text =[NSString stringWithFormat:@"PM2.5：%@",dic[@"pm25"][@"pm25"][@"pm25"]];
+        _humidityANDwind.text = [NSString stringWithFormat:@"%@%@ %@米/秒",_weatherInfo[@"wind"][@"direct"],_weatherInfo[@"wind"][@"power"],_weatherInfo[@"wind"][@"windspeed"]];
+        _dateLabel.text = [NSString stringWithFormat:@"%@",_weatherInfo[@"date"]];
+        _timeLabel.text = [NSString stringWithFormat:@"信息于 %@ 发布",_weatherInfo[@"time"]];
+        _adviceLabel.text = [NSString stringWithFormat:@"  %@",dic[@"life"][@"info"][@"ganmao"][1]];
+        _dressing_index.text = [NSString stringWithFormat:@"穿衣指数:%@",dic[@"life"][@"info"][@"chuanyi"][1]];
+        _drying_index.text = [NSString stringWithFormat:@"空调指数:%@",dic[@"life"][@"info"][@"kongtiao"][0]];
+        _uv_index.text = [NSString stringWithFormat:@"紫外线指数:%@",dic[@"life"][@"info"][@"ziwaixian"][0]];
+        _comfort_index.text = [NSString stringWithFormat:@"污染指数:%@",dic[@"life"][@"info"][@"wuran"][0]];
+        _wash_index.text = [NSString stringWithFormat:@"洗刷指数:%@",dic[@"life"][@"info"][@"xiche"][0]];
+        _travel_index.text = [NSString stringWithFormat:@"感冒指数:%@",dic[@"life"][@"info"][@"ganmao"][0]];
+        _exercise_index.text = [NSString stringWithFormat:@"锻炼指数:%@",dic[@"life"][@"info"][@"yundong"][0]];
+
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
         NSLog(@"errror:%@",error);
     }];
-    
-}
 
-- (void)setAutoLayout{
-    
-    NSDictionary *views = NSDictionaryOfVariableBindings(self.view,_imageView,_temperatureLabel,_centerView);
-
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_temperatureLabel][_imageView]-10-[_centerView]" options:0 metrics:nil views:views]];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_centerView]-20-[_centerView]" options:0 metrics:nil views:views]];
-
-    
-    
-    
-    
 }
 
 
+- (IBAction)jumpToFuture:(UIButton *)sender {
+    
+    futureWeayherViewController *new1 = [futureWeayherViewController new];
+    [new1 setValue:_futureWeather forKey:@"futureWeatherInfo"];
+    
+    [self.navigationController pushViewController:new1 animated:YES];
+}
+
+- (IBAction)showLifeInfo:(UIButton *)sender {
+    if (_newlifeInfoView.hidden == NO) {
+        _newlifeInfoView.hidden = YES;
+    }
+    else{
+    _newlifeInfoView.hidden = NO;
+    }
+    
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    _newlifeInfoView.hidden = YES;
+
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+//      判断启动的目标View是否为MyViewController
+    if([[segue destinationViewController] class] == [futureWeayherViewController class])
+    {
+        futureWeayherViewController *myView = [segue destinationViewController];
+        [myView setValue:_futureWeather forKey:@"futureWeatherInfo"];
+    }
+}
 @end

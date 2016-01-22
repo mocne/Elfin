@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731125901C507BB3000F017C /* JuheApisSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7311258F1C507BB3000F017C /* JuheApisSDK.a */; };
+		731125971C50A2D8000F017C /* newsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731125961C50A2D8000F017C /* newsViewController.m */; };
+		731B2DC41C51054200DB8D84 /* futureWeayherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731B2DC31C51054200DB8D84 /* futureWeayherViewController.m */; };
 		739941421C4F6A0B003703F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941411C4F6A0B003703F6 /* main.m */; };
 		739941451C4F6A0B003703F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941441C4F6A0B003703F6 /* AppDelegate.m */; };
 		7399414B1C4F6A0B003703F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739941491C4F6A0B003703F6 /* Main.storyboard */; };
@@ -38,6 +41,10 @@
 		739941B61C4F6F0A003703F6 /* citysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941B51C4F6F0A003703F6 /* citysViewController.m */; };
 		739941B81C4F6F2B003703F6 /* O.png in Resources */ = {isa = PBXBuildFile; fileRef = 739941B71C4F6F2B003703F6 /* O.png */; };
 		739941BA1C4F7A4F003703F6 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 739941B91C4F7A4F003703F6 /* city.plist */; };
+		73B2F5891C51DFFC00CCB9C6 /* secondNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2F5881C51DFFC00CCB9C6 /* secondNewsViewController.m */; };
+		73B2F58C1C51EF8A00CCB9C6 /* thirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2F58B1C51EF8A00CCB9C6 /* thirdViewController.m */; };
+		73B2F5901C5219DC00CCB9C6 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 73B2F58F1C5219DC00CCB9C6 /* a.png */; };
+		73EF25971C51BC5700134FD8 /* futureWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73EF25961C51BC5700134FD8 /* futureWeatherModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7311258D1C507BB3000F017C /* JHAPISDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAPISDK.h; sourceTree = "<group>"; };
+		7311258E1C507BB3000F017C /* JHOpenidSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOpenidSupplier.h; sourceTree = "<group>"; };
+		7311258F1C507BB3000F017C /* JuheApisSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JuheApisSDK.a; sourceTree = "<group>"; };
+		731125951C50A2D8000F017C /* newsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsViewController.h; sourceTree = "<group>"; };
+		731125961C50A2D8000F017C /* newsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsViewController.m; sourceTree = "<group>"; };
+		731B2DC21C51054200DB8D84 /* futureWeayherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = futureWeayherViewController.h; sourceTree = "<group>"; };
+		731B2DC31C51054200DB8D84 /* futureWeayherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = futureWeayherViewController.m; sourceTree = "<group>"; };
 		7399413D1C4F6A0B003703F6 /* 小精灵.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小精灵.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739941411C4F6A0B003703F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		739941431C4F6A0B003703F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +123,13 @@
 		739941B71C4F6F2B003703F6 /* O.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = O.png; sourceTree = "<group>"; };
 		739941B91C4F7A4F003703F6 /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = city.plist; sourceTree = "<group>"; };
 		739941BB1C4F7C7A003703F6 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		73B2F5871C51DFFC00CCB9C6 /* secondNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondNewsViewController.h; sourceTree = "<group>"; };
+		73B2F5881C51DFFC00CCB9C6 /* secondNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondNewsViewController.m; sourceTree = "<group>"; };
+		73B2F58A1C51EF8A00CCB9C6 /* thirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thirdViewController.h; sourceTree = "<group>"; };
+		73B2F58B1C51EF8A00CCB9C6 /* thirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thirdViewController.m; sourceTree = "<group>"; };
+		73B2F58F1C5219DC00CCB9C6 /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
+		73EF25951C51BC5700134FD8 /* futureWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = futureWeatherModel.h; sourceTree = "<group>"; };
+		73EF25961C51BC5700134FD8 /* futureWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = futureWeatherModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731125901C507BB3000F017C /* JuheApisSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +158,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7311258A1C507BB3000F017C /* JuheApisSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7311258B1C507BB3000F017C /* include */,
+				7311258F1C507BB3000F017C /* JuheApisSDK.a */,
+			);
+			path = JuheApisSDK;
+			sourceTree = "<group>";
+		};
+		7311258B1C507BB3000F017C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				7311258C1C507BB3000F017C /* JuheApisSDK */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		7311258C1C507BB3000F017C /* JuheApisSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7311258D1C507BB3000F017C /* JHAPISDK.h */,
+				7311258E1C507BB3000F017C /* JHOpenidSupplier.h */,
+			);
+			path = JuheApisSDK;
+			sourceTree = "<group>";
+		};
+		731125941C50A2B5000F017C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				731125951C50A2D8000F017C /* newsViewController.h */,
+				731125961C50A2D8000F017C /* newsViewController.m */,
+				73B2F5871C51DFFC00CCB9C6 /* secondNewsViewController.h */,
+				73B2F5881C51DFFC00CCB9C6 /* secondNewsViewController.m */,
+				73B2F58A1C51EF8A00CCB9C6 /* thirdViewController.h */,
+				73B2F58B1C51EF8A00CCB9C6 /* thirdViewController.m */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
 		739941341C4F6A0B003703F6 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				739941B91C4F7A4F003703F6 /* city.plist */,
+				73B2F58F1C5219DC00CCB9C6 /* a.png */,
 				739941B71C4F6F2B003703F6 /* O.png */,
 				739941B11C4F6DCF003703F6 /* icon.png */,
 				739941B01C4F6C93003703F6 /* weather */,
@@ -225,6 +287,7 @@
 			children = (
 				739941B31C4F6EF7003703F6 /* citys */,
 				7399418F1C4F6A9E003703F6 /* weather */,
+				731125941C50A2B5000F017C /* News */,
 				739941901C4F6AC3003703F6 /* bus */,
 				739941911C4F6ACD003703F6 /* life */,
 				739941921C4F6AD4003703F6 /* user */,
@@ -245,6 +308,8 @@
 		739941891C4F6A38003703F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				73EF25951C51BC5700134FD8 /* futureWeatherModel.h */,
+				73EF25961C51BC5700134FD8 /* futureWeatherModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +317,7 @@
 		7399418A1C4F6A38003703F6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				7311258A1C507BB3000F017C /* JuheApisSDK */,
 				739941731C4F6A25003703F6 /* AFNetworking */,
 				739941BB1C4F7C7A003703F6 /* Header.h */,
 			);
@@ -273,6 +339,8 @@
 			children = (
 				7399418C1C4F6A8B003703F6 /* weatherViewController.h */,
 				7399418D1C4F6A8B003703F6 /* weatherViewController.m */,
+				731B2DC21C51054200DB8D84 /* futureWeayherViewController.h */,
+				731B2DC31C51054200DB8D84 /* futureWeayherViewController.m */,
 			);
 			name = weather;
 			sourceTree = "<group>";
@@ -311,11 +379,11 @@
 				7399419D1C4F6C88003703F6 /* cloudy.jpg */,
 				7399419E1C4F6C88003703F6 /* fog.jpg */,
 				7399419F1C4F6C88003703F6 /* night.jpg */,
+				739941A41C4F6C88003703F6 /* sunny.jpg */,
 				739941A01C4F6C88003703F6 /* nightcloud.jpg */,
 				739941A11C4F6C88003703F6 /* rain.jpg */,
 				739941A21C4F6C88003703F6 /* sandstorm.jpg */,
 				739941A31C4F6C88003703F6 /* snow.jpg */,
-				739941A41C4F6C88003703F6 /* sunny.jpg */,
 				739941A51C4F6C88003703F6 /* thunderstorm.jpg */,
 			);
 			name = weather;
@@ -452,6 +520,7 @@
 				739941BA1C4F7A4F003703F6 /* city.plist in Resources */,
 				739941AA1C4F6C88003703F6 /* nightcloud.jpg in Resources */,
 				739941A91C4F6C88003703F6 /* night.jpg in Resources */,
+				73B2F5901C5219DC00CCB9C6 /* a.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,12 +552,17 @@
 				739941831C4F6A25003703F6 /* AFSecurityPolicy.m in Sources */,
 				739941841C4F6A25003703F6 /* AFURLRequestSerialization.m in Sources */,
 				739941981C4F6AF5003703F6 /* lifeViewController.m in Sources */,
+				731B2DC41C51054200DB8D84 /* futureWeayherViewController.m in Sources */,
 				739941851C4F6A25003703F6 /* AFURLResponseSerialization.m in Sources */,
 				739941951C4F6AEC003703F6 /* busViewController.m in Sources */,
 				7399419B1C4F6AFD003703F6 /* userViewController.m in Sources */,
+				73B2F5891C51DFFC00CCB9C6 /* secondNewsViewController.m in Sources */,
 				739941B61C4F6F0A003703F6 /* citysViewController.m in Sources */,
+				731125971C50A2D8000F017C /* newsViewController.m in Sources */,
+				73B2F58C1C51EF8A00CCB9C6 /* thirdViewController.m in Sources */,
 				739941811C4F6A25003703F6 /* AFHTTPSessionManager.m in Sources */,
 				7399418E1C4F6A8B003703F6 /* weatherViewController.m in Sources */,
+				73EF25971C51BC5700134FD8 /* futureWeatherModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,10 +703,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "小精灵/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/小精灵/Source/JuheApisSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qingyun.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -640,10 +721,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "小精灵/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/小精灵/Source/JuheApisSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qingyun.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -714,6 +802,7 @@
 				7399416C1C4F6A0B003703F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7399416D1C4F6A0B003703F6 /* Build configuration list for PBXNativeTarget "小精灵Tests" */ = {
 			isa = XCConfigurationList;
@@ -722,6 +811,7 @@
 				7399416F1C4F6A0B003703F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		739941701C4F6A0B003703F6 /* Build configuration list for PBXNativeTarget "小精灵UITests" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +820,7 @@
 				739941721C4F6A0B003703F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
