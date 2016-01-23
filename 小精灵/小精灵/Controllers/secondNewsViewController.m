@@ -55,9 +55,27 @@
     [mgr GET:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *dic = (NSDictionary *)responseObject;
-        _newsInfo = dic[@"result"];
+        NSString *str = dic[@"reason"];
+        
+        if ([str isEqualToString:@"查询成功"]) {
+            _newsInfo = dic[@"result"];
+            
+            [_newsTableView reloadData];
+        } else {
+            UIAlertController *new = [UIAlertController alertControllerWithTitle:@"加载失败" message:@"查询不到相关的新闻" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *sancelAction = [UIAlertAction actionWithTitle:@"取消加载" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
                 
-        [_newsTableView reloadData];
+                [self.navigationController popViewControllerAnimated:YES];
+            }];
+            
+            [new addAction:sancelAction];
+            
+            [self presentViewController:new animated:YES completion:^{}];
+            
+
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         UIAlertController *new = [UIAlertController alertControllerWithTitle:@"加载失败" message:@"查询不到相关的新闻" preferredStyle:UIAlertControllerStyleAlert];
@@ -102,7 +120,7 @@
     cell.textLabel.numberOfLines = 1;
     cell.detailTextLabel.numberOfLines = 4;
     
-    cell.textLabel.text = [NSString stringWithFormat:@"⭕️ %@",dic[@"title"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"⭕️ %@ : %@",dic[@"src"],dic[@"title"]];
     cell.detailTextLabel.text = dic[@"content"];
     
     return cell;

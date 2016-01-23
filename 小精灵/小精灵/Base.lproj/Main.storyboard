@@ -310,6 +310,24 @@
             </objects>
             <point key="canvasLocation" x="2004" y="1716"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="amo-AF-tmZ">
+            <objects>
+                <viewController id="cbn-Lr-6dA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DYD-3c-QFO"/>
+                        <viewControllerLayoutGuide type="bottom" id="RvG-f4-OLV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vm2-ZF-XgV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMd-rY-Zmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2522" y="1732"/>
+        </scene>
         <!--天气-->
         <scene sceneID="aB1-wM-3Z1">
             <objects>
@@ -379,8 +397,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgR-Kg-mlC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfR-Cc-lkG">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D8z-KI-tZ8" id="mN8-mZ-5J4"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgR-Kg-mlC">
+                                <rect key="frame" x="0.0" y="138" width="375" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="D8z-KI-tZ8" id="X9p-5M-DXO"/>
@@ -389,15 +414,20 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="LgR-Kg-mlC" firstAttribute="top" secondItem="PfR-Cc-lkG" secondAttribute="bottom" id="8dr-fd-5PC"/>
                             <constraint firstAttribute="bottom" secondItem="LgR-Kg-mlC" secondAttribute="bottom" id="9q4-kj-l1a"/>
-                            <constraint firstItem="LgR-Kg-mlC" firstAttribute="top" secondItem="tKh-bR-gV3" secondAttribute="top" id="JJ1-cn-aHY"/>
+                            <constraint firstAttribute="trailing" secondItem="PfR-Cc-lkG" secondAttribute="trailing" id="Wvp-iH-a2n"/>
+                            <constraint firstItem="PfR-Cc-lkG" firstAttribute="leading" secondItem="tKh-bR-gV3" secondAttribute="leading" id="ccf-tM-Wbq"/>
                             <constraint firstAttribute="trailing" secondItem="LgR-Kg-mlC" secondAttribute="trailing" id="iwG-tz-vvh"/>
+                            <constraint firstItem="PfR-Cc-lkG" firstAttribute="top" secondItem="yX8-9S-pTB" secondAttribute="bottom" id="mq6-RA-GCV"/>
                             <constraint firstItem="LgR-Kg-mlC" firstAttribute="leading" secondItem="tKh-bR-gV3" secondAttribute="leading" id="wbD-SV-fyp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="新闻概要" id="0AF-Fg-M1t"/>
                     <connections>
+                        <outlet property="searchBar" destination="PfR-Cc-lkG" id="TLR-V3-GWb"/>
                         <outlet property="tableView" destination="LgR-Kg-mlC" id="uxa-I5-otm"/>
                     </connections>
                 </viewController>

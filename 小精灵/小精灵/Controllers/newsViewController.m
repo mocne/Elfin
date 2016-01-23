@@ -12,12 +12,14 @@
 #import "AFHTTPSessionManager.h"
 #import "secondNewsViewController.h"
 
-@interface newsViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface newsViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) NSArray *newsInfo;
 @property (nonatomic, strong) NSArray *newstitle;
 @property (nonatomic, strong) NSString *temp;
-//@property (nonatomic, strong) NSString *title;
+@property (nonatomic) BOOL isSearching;
+@property (nonatomic, strong) UIRefreshControl *refresh;
 
 @end
 
@@ -28,6 +30,11 @@
     // Do any additional setup after loading the view.
     
     [self getNews];
+    _refresh=[[UIRefreshControl alloc] init];
+    _refresh.attributedTitle=[[NSAttributedString alloc] initWithString:@"下拉刷新..."];
+    [_refresh addTarget:self action:@selector(getNews) forControlEvents:UIControlEventValueChanged];
+    //添加tableview
+    [_tableView addSubview:_refresh];
     
 }
 
@@ -36,7 +43,6 @@
     //请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"key"] = kNewsAppKey;
-    params[@"q"] = @"郑州";
     params[@"dtype"] = @"json";
     
 
@@ -48,9 +54,14 @@
         
         NSDictionary *dic = (NSDictionary *)responseObject;
         _newstitle = dic[@"result"];
-        [_tableView reloadData];
-    } failure:nil];
-
+        
+          [_tableView reloadData];
+        
+        [_refresh endRefreshing]                                                                                                                                                                                                                                                 ;
+    
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
     
     
 }
@@ -90,5 +101,22 @@
     
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+
+    secondNewsViewController *new = [secondNewsViewController new];
+    [new setValue:searchBar.text forKey:@"newsTitle"];
+    [self.navigationController pushViewController:new animated:YES];
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    [_searchBar resignFirstResponder];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [_searchBar resignFirstResponder];
+
+}
 
 @end

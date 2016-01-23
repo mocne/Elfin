@@ -10,9 +10,9 @@
 		731125901C507BB3000F017C /* JuheApisSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7311258F1C507BB3000F017C /* JuheApisSDK.a */; };
 		731125971C50A2D8000F017C /* newsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731125961C50A2D8000F017C /* newsViewController.m */; };
 		731B2DC41C51054200DB8D84 /* futureWeayherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731B2DC31C51054200DB8D84 /* futureWeayherViewController.m */; };
+		733323C21C53558100D7B272 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 733323C11C53558100D7B272 /* AppDelegate.m */; };
+		733323C51C53561B00D7B272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733323C31C53561B00D7B272 /* Main.storyboard */; };
 		739941421C4F6A0B003703F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941411C4F6A0B003703F6 /* main.m */; };
-		739941451C4F6A0B003703F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941441C4F6A0B003703F6 /* AppDelegate.m */; };
-		7399414B1C4F6A0B003703F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739941491C4F6A0B003703F6 /* Main.storyboard */; };
 		7399414D1C4F6A0B003703F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7399414C1C4F6A0B003703F6 /* Assets.xcassets */; };
 		739941501C4F6A0B003703F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7399414E1C4F6A0B003703F6 /* LaunchScreen.storyboard */; };
 		7399415B1C4F6A0B003703F6 /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7399415A1C4F6A0B003703F6 /* ___Tests.m */; };
@@ -24,8 +24,6 @@
 		739941851C4F6A25003703F6 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7399417E1C4F6A25003703F6 /* AFURLResponseSerialization.m */; };
 		739941861C4F6A25003703F6 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941801C4F6A25003703F6 /* AFURLSessionManager.m */; };
 		7399418E1C4F6A8B003703F6 /* weatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7399418D1C4F6A8B003703F6 /* weatherViewController.m */; };
-		739941951C4F6AEC003703F6 /* busViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941941C4F6AEC003703F6 /* busViewController.m */; };
-		739941981C4F6AF5003703F6 /* lifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941971C4F6AF5003703F6 /* lifeViewController.m */; };
 		7399419B1C4F6AFD003703F6 /* userViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7399419A1C4F6AFD003703F6 /* userViewController.m */; };
 		739941A61C4F6C88003703F6 /* cloud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7399419C1C4F6C88003703F6 /* cloud.jpg */; };
 		739941A71C4F6C88003703F6 /* cloudy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7399419D1C4F6C88003703F6 /* cloudy.jpg */; };
@@ -72,11 +70,11 @@
 		731125961C50A2D8000F017C /* newsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsViewController.m; sourceTree = "<group>"; };
 		731B2DC21C51054200DB8D84 /* futureWeayherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = futureWeayherViewController.h; sourceTree = "<group>"; };
 		731B2DC31C51054200DB8D84 /* futureWeayherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = futureWeayherViewController.m; sourceTree = "<group>"; };
+		733323C01C53558100D7B272 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "小精灵/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		733323C11C53558100D7B272 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "小精灵/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		733323C41C53561B00D7B272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "小精灵/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		7399413D1C4F6A0B003703F6 /* 小精灵.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小精灵.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739941411C4F6A0B003703F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		739941431C4F6A0B003703F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		739941441C4F6A0B003703F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
-		7399414A1C4F6A0B003703F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7399414C1C4F6A0B003703F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		7399414F1C4F6A0B003703F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		739941511C4F6A0B003703F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
@@ -101,10 +99,6 @@
 		739941801C4F6A25003703F6 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		7399418C1C4F6A8B003703F6 /* weatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weatherViewController.h; sourceTree = "<group>"; };
 		7399418D1C4F6A8B003703F6 /* weatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weatherViewController.m; sourceTree = "<group>"; };
-		739941931C4F6AEC003703F6 /* busViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = busViewController.h; sourceTree = "<group>"; };
-		739941941C4F6AEC003703F6 /* busViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = busViewController.m; sourceTree = "<group>"; };
-		739941961C4F6AF5003703F6 /* lifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lifeViewController.h; sourceTree = "<group>"; };
-		739941971C4F6AF5003703F6 /* lifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lifeViewController.m; sourceTree = "<group>"; };
 		739941991C4F6AFD003703F6 /* userViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userViewController.h; sourceTree = "<group>"; };
 		7399419A1C4F6AFD003703F6 /* userViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userViewController.m; sourceTree = "<group>"; };
 		7399419C1C4F6C88003703F6 /* cloud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloud.jpg; sourceTree = "<group>"; };
@@ -288,8 +282,6 @@
 				739941B31C4F6EF7003703F6 /* citys */,
 				7399418F1C4F6A9E003703F6 /* weather */,
 				731125941C50A2B5000F017C /* News */,
-				739941901C4F6AC3003703F6 /* bus */,
-				739941911C4F6ACD003703F6 /* life */,
 				739941921C4F6AD4003703F6 /* user */,
 			);
 			path = Controllers;
@@ -327,9 +319,9 @@
 		7399418B1C4F6A38003703F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				739941431C4F6A0B003703F6 /* AppDelegate.h */,
-				739941441C4F6A0B003703F6 /* AppDelegate.m */,
-				739941491C4F6A0B003703F6 /* Main.storyboard */,
+				733323C31C53561B00D7B272 /* Main.storyboard */,
+				733323C01C53558100D7B272 /* AppDelegate.h */,
+				733323C11C53558100D7B272 /* AppDelegate.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,24 +335,6 @@
 				731B2DC31C51054200DB8D84 /* futureWeayherViewController.m */,
 			);
 			name = weather;
-			sourceTree = "<group>";
-		};
-		739941901C4F6AC3003703F6 /* bus */ = {
-			isa = PBXGroup;
-			children = (
-				739941931C4F6AEC003703F6 /* busViewController.h */,
-				739941941C4F6AEC003703F6 /* busViewController.m */,
-			);
-			name = bus;
-			sourceTree = "<group>";
-		};
-		739941911C4F6ACD003703F6 /* life */ = {
-			isa = PBXGroup;
-			children = (
-				739941961C4F6AF5003703F6 /* lifeViewController.h */,
-				739941971C4F6AF5003703F6 /* lifeViewController.m */,
-			);
-			name = life;
 			sourceTree = "<group>";
 		};
 		739941921C4F6AD4003703F6 /* user */ = {
@@ -509,8 +483,8 @@
 				739941AE1C4F6C88003703F6 /* sunny.jpg in Resources */,
 				739941501C4F6A0B003703F6 /* LaunchScreen.storyboard in Resources */,
 				7399414D1C4F6A0B003703F6 /* Assets.xcassets in Resources */,
-				7399414B1C4F6A0B003703F6 /* Main.storyboard in Resources */,
 				739941AB1C4F6C88003703F6 /* rain.jpg in Resources */,
+				733323C51C53561B00D7B272 /* Main.storyboard in Resources */,
 				739941AC1C4F6C88003703F6 /* sandstorm.jpg in Resources */,
 				739941B21C4F6DCF003703F6 /* icon.png in Resources */,
 				739941B81C4F6F2B003703F6 /* O.png in Resources */,
@@ -546,15 +520,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				739941861C4F6A25003703F6 /* AFURLSessionManager.m in Sources */,
-				739941451C4F6A0B003703F6 /* AppDelegate.m in Sources */,
 				739941821C4F6A25003703F6 /* AFNetworkReachabilityManager.m in Sources */,
+				733323C21C53558100D7B272 /* AppDelegate.m in Sources */,
 				739941421C4F6A0B003703F6 /* main.m in Sources */,
 				739941831C4F6A25003703F6 /* AFSecurityPolicy.m in Sources */,
 				739941841C4F6A25003703F6 /* AFURLRequestSerialization.m in Sources */,
-				739941981C4F6AF5003703F6 /* lifeViewController.m in Sources */,
 				731B2DC41C51054200DB8D84 /* futureWeayherViewController.m in Sources */,
 				739941851C4F6A25003703F6 /* AFURLResponseSerialization.m in Sources */,
-				739941951C4F6AEC003703F6 /* busViewController.m in Sources */,
 				7399419B1C4F6AFD003703F6 /* userViewController.m in Sources */,
 				73B2F5891C51DFFC00CCB9C6 /* secondNewsViewController.m in Sources */,
 				739941B61C4F6F0A003703F6 /* citysViewController.m in Sources */,
@@ -598,13 +570,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		739941491C4F6A0B003703F6 /* Main.storyboard */ = {
+		733323C31C53561B00D7B272 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7399414A1C4F6A0B003703F6 /* Base */,
+				733323C41C53561B00D7B272 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		7399414E1C4F6A0B003703F6 /* LaunchScreen.storyboard */ = {
