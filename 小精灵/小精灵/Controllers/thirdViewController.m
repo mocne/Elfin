@@ -28,26 +28,16 @@
     _webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     _webView.delegate = self;
     _webView.scalesPageToFit = YES;
-    _webView.dataDetectorTypes = UIDataDetectorTypePhoneNumber;    [self.view addSubview:_webView];
+    _webView.dataDetectorTypes = UIDataDetectorTypePhoneNumber;
+    [self.view addSubview:_webView];
 
     NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:_urlStr]];
     [_webView loadRequest:request];
     
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
-
-//    _alert = [UIAlertController alertControllerWithTitle:@"加载中^_^" message:@"网速较慢，请耐心等待……" preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    UIAlertAction *sancelAction = [UIAlertAction actionWithTitle:@"取消加载" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-//
-//        [self.navigationController popViewControllerAnimated:YES];
-//    }];
-//
-//    [_alert addAction:sancelAction];
-//    
-//    //显示alertController
-//    [self presentViewController:_alert animated:YES completion:^{}];
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [_webView stopLoading];
 }
 
 @end

@@ -105,17 +105,22 @@
 
     secondNewsViewController *new = [secondNewsViewController new];
     [new setValue:searchBar.text forKey:@"newsTitle"];
+    self.isSearching = NO;
     [self.navigationController pushViewController:new animated:YES];
+    
+}
 
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-    [_searchBar resignFirstResponder];
+    [self resignFirstResponder];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [_searchBar resignFirstResponder];
+    [self resignFirstResponder];
 
 }
 

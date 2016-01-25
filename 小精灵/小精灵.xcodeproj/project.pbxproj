@@ -13,8 +13,6 @@
 		733323C21C53558100D7B272 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 733323C11C53558100D7B272 /* AppDelegate.m */; };
 		733323C51C53561B00D7B272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733323C31C53561B00D7B272 /* Main.storyboard */; };
 		739941421C4F6A0B003703F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941411C4F6A0B003703F6 /* main.m */; };
-		7399414D1C4F6A0B003703F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7399414C1C4F6A0B003703F6 /* Assets.xcassets */; };
-		739941501C4F6A0B003703F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7399414E1C4F6A0B003703F6 /* LaunchScreen.storyboard */; };
 		7399415B1C4F6A0B003703F6 /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7399415A1C4F6A0B003703F6 /* ___Tests.m */; };
 		739941661C4F6A0B003703F6 /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941651C4F6A0B003703F6 /* ___UITests.m */; };
 		739941811C4F6A25003703F6 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 739941751C4F6A25003703F6 /* AFHTTPSessionManager.m */; };
@@ -43,6 +41,9 @@
 		73B2F58C1C51EF8A00CCB9C6 /* thirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2F58B1C51EF8A00CCB9C6 /* thirdViewController.m */; };
 		73B2F5901C5219DC00CCB9C6 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 73B2F58F1C5219DC00CCB9C6 /* a.png */; };
 		73EF25971C51BC5700134FD8 /* futureWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73EF25961C51BC5700134FD8 /* futureWeatherModel.m */; };
+		73FF67DE1C54C5080038CA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FF67DD1C54C5080038CA62 /* Assets.xcassets */; };
+		73FF67E11C54C6DC0038CA62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FF67DF1C54C6DC0038CA62 /* LaunchScreen.storyboard */; };
+		73FF67E31C54C6F20038CA62 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73FF67E21C54C6F20038CA62 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +76,6 @@
 		733323C41C53561B00D7B272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "小精灵/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		7399413D1C4F6A0B003703F6 /* 小精灵.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小精灵.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739941411C4F6A0B003703F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7399414C1C4F6A0B003703F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
-		7399414F1C4F6A0B003703F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		739941511C4F6A0B003703F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		739941561C4F6A0B003703F6 /* 小精灵Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "小精灵Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7399415A1C4F6A0B003703F6 /* ___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___Tests.m"; sourceTree = "<group>"; };
 		7399415C1C4F6A0B003703F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +122,9 @@
 		73B2F58F1C5219DC00CCB9C6 /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
 		73EF25951C51BC5700134FD8 /* futureWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = futureWeatherModel.h; sourceTree = "<group>"; };
 		73EF25961C51BC5700134FD8 /* futureWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = futureWeatherModel.m; sourceTree = "<group>"; };
+		73FF67DD1C54C5080038CA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "小精灵/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		73FF67E01C54C6DC0038CA62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "小精灵/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
+		73FF67E21C54C6F20038CA62 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "小精灵/Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,9 +291,9 @@
 		739941881C4F6A38003703F6 /* misc */ = {
 			isa = PBXGroup;
 			children = (
-				7399414C1C4F6A0B003703F6 /* Assets.xcassets */,
-				7399414E1C4F6A0B003703F6 /* LaunchScreen.storyboard */,
-				739941511C4F6A0B003703F6 /* Info.plist */,
+				73FF67E21C54C6F20038CA62 /* Info.plist */,
+				73FF67DF1C54C6DC0038CA62 /* LaunchScreen.storyboard */,
+				73FF67DD1C54C5080038CA62 /* Assets.xcassets */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -480,13 +481,13 @@
 			files = (
 				739941AF1C4F6C88003703F6 /* thunderstorm.jpg in Resources */,
 				739941A81C4F6C88003703F6 /* fog.jpg in Resources */,
+				73FF67E31C54C6F20038CA62 /* Info.plist in Resources */,
 				739941AE1C4F6C88003703F6 /* sunny.jpg in Resources */,
-				739941501C4F6A0B003703F6 /* LaunchScreen.storyboard in Resources */,
-				7399414D1C4F6A0B003703F6 /* Assets.xcassets in Resources */,
 				739941AB1C4F6C88003703F6 /* rain.jpg in Resources */,
 				733323C51C53561B00D7B272 /* Main.storyboard in Resources */,
 				739941AC1C4F6C88003703F6 /* sandstorm.jpg in Resources */,
 				739941B21C4F6DCF003703F6 /* icon.png in Resources */,
+				73FF67E11C54C6DC0038CA62 /* LaunchScreen.storyboard in Resources */,
 				739941B81C4F6F2B003703F6 /* O.png in Resources */,
 				739941AD1C4F6C88003703F6 /* snow.jpg in Resources */,
 				739941A71C4F6C88003703F6 /* cloudy.jpg in Resources */,
@@ -494,6 +495,7 @@
 				739941BA1C4F7A4F003703F6 /* city.plist in Resources */,
 				739941AA1C4F6C88003703F6 /* nightcloud.jpg in Resources */,
 				739941A91C4F6C88003703F6 /* night.jpg in Resources */,
+				73FF67DE1C54C5080038CA62 /* Assets.xcassets in Resources */,
 				73B2F5901C5219DC00CCB9C6 /* a.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,13 +580,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		7399414E1C4F6A0B003703F6 /* LaunchScreen.storyboard */ = {
+		73FF67DF1C54C6DC0038CA62 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7399414F1C4F6A0B003703F6 /* Base */,
+				73FF67E01C54C6DC0038CA62 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
