@@ -121,7 +121,10 @@
     cell.detailTextLabel.numberOfLines = 4;
     
     cell.textLabel.text = [NSString stringWithFormat:@"⭕️ %@ : %@",dic[@"src"],dic[@"title"]];
-    cell.detailTextLabel.text = dic[@"content"];
+    NSString *string = dic[@"content"];
+    NSString *strUrl1 = [string stringByReplacingOccurrencesOfString:@"<em>" withString:@""];
+    NSString *strUrl2 = [strUrl1 stringByReplacingOccurrencesOfString:@"</em>" withString:@""];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"\t    %@",strUrl2];
     
     return cell;
 }
@@ -134,9 +137,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-        thirdViewController *new = [thirdViewController new];
-        [new setValue:_newsInfo[indexPath.row][@"url"] forKey:@"urlStr"];
-        [self.navigationController pushViewController:new animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    thirdViewController *new = [thirdViewController new];
+    [new setValue:_newsInfo[indexPath.row][@"url"] forKey:@"urlStr"];
+    [self.navigationController pushViewController:new animated:YES];
 
     
 }
