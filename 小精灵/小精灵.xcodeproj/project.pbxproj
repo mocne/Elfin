@@ -439,7 +439,7 @@
 				TargetAttributes = {
 					7399413C1C4F6A0B003703F6 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2KTXQ3SG23;
+						DevelopmentTeam = LSRRXAH5MP;
 					};
 					739941551C4F6A0B003703F6 = {
 						CreatedOnToolsVersion = 7.2;
@@ -607,7 +607,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Henan Qingyun Information Technology Co., Ltd. (LSRRXAH5MP)";
-				
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -629,7 +628,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -652,7 +650,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Henan Qingyun Information Technology Co., Ltd. (LSRRXAH5MP)";
-				
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -667,7 +664,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -677,17 +673,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Henan Qingyun Information Technology Co., Ltd. (LSRRXAH5MP)";
-				
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "小精灵/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/小精灵/Source/JuheApisSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cim.qingyun15096kaifeng.Elfin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qy15092.ELFIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				
+				PROVISIONING_PROFILE = "4596eb00-cdb8-4477-863d-e8a2ab37f1ca";
 			};
 			name = Debug;
 		};
@@ -695,17 +690,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Henan Qingyun Information Technology Co., Ltd. (LSRRXAH5MP)";
-				
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "小精灵/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/小精灵/Source/JuheApisSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cim.qingyun15096kaifeng.Elfin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qy15092.ELFIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				
+				PROVISIONING_PROFILE = "4596eb00-cdb8-4477-863d-e8a2ab37f1ca";
 			};
 			name = Release;
 		};
