@@ -20,11 +20,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
+//    self.tabBarController.tabBar.translucent = NO;
+    self.tabBarController.tabBar.hidden = YES;
     
-    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
+    UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg007"]];
+    [_tableView setBackgroundView:img];
     [_tableView reloadData];
 }
 
@@ -59,7 +63,8 @@
     cell.detailTextLabel.numberOfLines = 0;
     cell.textLabel.text = [NSString stringWithFormat:@"%@日 农历:%@ 星期%@",str3,dict[@"nongli"],dict[@"week"]];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"    白天：%@; 最低温度:%@; 最高温度:%@; 风速:%@%@; 日出时间:%@\n    夜晚：%@; 最低温度:%@; 最高温度:%@; 风速:%@%@; 日落时间:%@",dayInfo[1],dayInfo[2],dayInfo[0],dayInfo[3],dayInfo[4],dayInfo[5],nightInfo[1],nightInfo[2],nightInfo[0],nightInfo[3],nightInfo[4],nightInfo[5]];
-    
+    cell.userInteractionEnabled = NO;
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 

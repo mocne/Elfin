@@ -52,7 +52,7 @@
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"city" ofType:@"plist"];
     NSMutableArray *city = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     _dataSource = [self sortArray:city];
-    
+        
 }
 
 
@@ -121,6 +121,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
     }
+
     
     cell.textLabel.text = [[self.dataSource[indexPath.section] objectAtIndex:indexPath.row] objectForKey:@"name"];
     
